@@ -21,7 +21,7 @@ const User = require("./models/user.js");
 const listingsRouter = require("./router/listings.js");
 const reviewsRouter = require("./router/reviews.js");
 const userRouter = require("./router/userRouter.js");
-
+git remote add origin https://github.com/tanzimsafin/tour-and-travel.git
 
 
 
