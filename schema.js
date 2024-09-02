@@ -22,4 +22,19 @@ module.exports.reviewSchema = Joi.object({
     }).required(),
 });
 
+module.exports.tourmatePostSchema = Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+    location: Joi.string().required(),
+    tourDate: Joi.date().required(),
+    numberOfDays: Joi.number().required().min(1),
+    people: Joi.number().required().min(1),
+    socialMedia: Joi.string().optional().allow(""),
+    contact: Joi.string().required(),
+    email: Joi.string().email().required(),
+    requirements: Joi.string().optional().allow(""),
+    estimatedCost: Joi.number().required().min(0),
+    about: Joi.string().optional().allow("")
+});
+
 

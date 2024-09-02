@@ -21,6 +21,9 @@ const User = require("./models/user.js");
 const listingsRouter = require("./router/listings.js");
 const reviewsRouter = require("./router/reviews.js");
 const userRouter = require("./router/userRouter.js");
+const tourmatePostsRouter = require('./router/tourmatePosts');
+
+
 
 
 
@@ -97,13 +100,10 @@ app.get('/calculator', (req, res) => {
   });
 
 //find tourmate
-app.get('/findtourmate', (req, res) => {
-    res.render('users/findtourmate');
-});
+app.use('/tourmatePosts', tourmatePostsRouter);
 
-app.get('/alltourmatepost', (req,res) => {
-    res.render('users/tourmatepool');
-});
+
+
 
 //Error Handling//
 app.all("*",(req,res,next) =>{
