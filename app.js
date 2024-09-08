@@ -21,7 +21,7 @@ const User = require("./models/user.js");
 const listingsRouter = require("./router/listings.js");
 const reviewsRouter = require("./router/reviews.js");
 const userRouter = require("./router/userRouter.js");
-const tourmatePostsRouter = require('./router/tourmatePosts');
+
 
 
 
@@ -99,8 +99,7 @@ app.get('/calculator', (req, res) => {
     res.render('users/costCalculator');
   });
 
-//find tourmate
-app.use('/tourmatePosts', tourmatePostsRouter);
+
 
 
 
